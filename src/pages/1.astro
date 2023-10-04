@@ -1,0 +1,51 @@
+---
+import Base from "../layouts/Base.astro";
+import Centered from "../components/Centered.astro";
+
+import puppy from "../../public/puppy.jpg"
+---
+
+<Base title="Sign Up now!">
+    <Centered>
+        <div class="lg:w-4/5 h-3/5 bg-slate-200 rounded-md">
+            <div class="flex flex-row-reverse flex-wrap lg:grid grid-cols-2 w-full h-full">
+                <div class="p-6 w-full">
+                    <h2 class="text-2xl">Volunteer now!</h2>
+                    <p class="italic font-semibold text-sm">
+                        <span class="text-cyan-600">Do good! </span> 
+                        <span class="text-sky-700">Help Others! </span> 
+                        <span class="text-blue-500">Improve your skills! </span>
+                    </p>
+        
+                    <div class="mt-8">
+                        <input class="capsule-style bg-slate-300" type="text" placeholder="Username">
+                        <input class="capsule-style bg-slate-300" type="email" placeholder="Email">
+                        <input class="capsule-style bg-slate-300" type="password" placeholder="Password">
+                        <p class="text-red-500 italic mt-2 ml-0">Please fill out all fields</p>
+                        <button class="mt-auto capsule-style bg-sky-500">Sign Up!</button>
+                        <p class="mt-2 flex justify-between">
+                            <a href="/forgotpassword" class="text-blue-500 hover:underline">Reset Password</a>
+                            <a href="/login" class="text-blue-500 hover:underline">Log in</a>
+                        </p>
+                        <p class="mt-1"></p>
+                    </div>
+                </div>
+
+                <div class="h-64 bg-gray-50 w-full lg:h-full overflow-hidden rounded-b-md lg:rounded-r-md lg:rounded-bl-none">
+                    <div class="flex items-center h-full">
+                        <img class="object-cover self-center h-full w-full" src={puppy.src} alt="A woman cuddeling with a puppy">
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        
+    </Centered>
+</Base>
+
+<style>
+    .capsule-style {
+        @apply block mt-4 w-full rounded-full px-4 py-2 ;
+    }
+</style>
