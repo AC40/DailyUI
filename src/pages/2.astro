@@ -1,0 +1,87 @@
+---
+import Base from "../layouts/Base.astro";
+import Centered from "../components/Centered.astro";
+
+import bookImg from "../../public/book.webp"
+import appleImg from "../../public/apple.png"
+import googleImg from "../../public/google.png"
+import amexImg from "../../public/amex.png"
+---
+
+<Base title="Credit Card Checkout">
+    <Centered>
+        <div class="bg-sky-200/80 max-w-3xl w-full h-4/6  p-4 rounded-lg shadow-md">
+            <div class="grid grid-cols-2 h-full gap-4">
+                <div class="h-full">
+                    <div class="bg-gray-50 h-full p-4 rounded-lg">
+                        <h3 class="text-2xl">Your Product</h3>
+                        <img src={bookImg.src} alt="The prodcut you are buying" class="h-64 mt-8 mx-auto object-cover">
+                        <h5 class="text-lg font-bold">Unlimited Energy</h5>
+                        <p class="text-slate-700 ital">by Hippo the Happy</p>
+                        <br>
+                        <p>This exciting novel is about life,death and the weird thing called hospital inbetween.</p>
+                        <br>
+                        <br>
+                        <br>
+                        <div class="flex gap-3 mt-auto">
+                            <span>250 p.</span>
+                            <span>•</span>
+                            <span>5h 43m</span>
+                            <span>•</span>
+                            <span>4.3/5 Stars</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <div>
+                    <div class="">
+                        <h3 class="text-3xl">Buy now</h3>
+                        <p class="mt-4 text-sm text-slate-600">Select payment method:</p>
+                        <div class="flex gap-4">
+                            <div class="bg-slate-200 border border-slate-400 hover:bg-slate-300 hover:border-slate-500 w-16 h-10 rounded flex justify-center items-center">
+                                <img src={googleImg.src} alt="The image of Google" class="w-8 h-8">
+                            </div>
+                            <div class="bg-slate-200 border border-slate-400 hover:bg-slate-300 hover:border-slate-500 w-16 h-10 rounded flex justify-center items-center">
+                                <img src={appleImg.src} alt="The image of Google" class="w-8 h-8">
+                            </div>
+                            <div class="bg-blue-200 border border-blue-400 w-16 h-10 rounded flex justify-center items-center">
+                                <img src={amexImg.src} alt="The image of Google" class="w-8 h-8">
+                            </div>
+                        </div>
+
+                        <div class="mt-4">
+                            <p class="text-sm text-slate-500">Credit Card Number</p>
+                            <input type="text" placeholder="0752 3853 3847 43" name="creditCard" id="" class="rounded-style">
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 mt-4">
+                            <div>
+                                <p class="text-sm text-slate-500">CSV (Security Code)</p>
+                                <input type="text" placeholder="123" name="creditCard" id="" class="rounded-style">
+                            </div>
+                            <div>
+                                <p class="text-sm text-slate-500">Expiration date</p>
+                                <input type="text" placeholder="XX/XX" name="creditCard" id="" class="rounded-style">
+                            </div>
+                        </div>
+
+                        <div class="flex mt-8 gap-2">
+                            <input type="checkbox" name="accentTerms" id="" class="mt-2">
+                            <p>By clicking this checkbox I accept all the <a href="/terms and condidtions">Terms and Conditions</a> as well as the <a href="/privacypolicy">privacy policy</a> of Just in Time Unlimited AG. I hereby grant some legal jargon to my lawyers, who will make it so that i do not have to pay when I get sued.</p>
+                        </div>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <button class="w-full rounded-full bg-cyan-800 hover:bg-sky-300 text-white hover:text-black py-2">Order now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </Centered>
+</Base>
+
+<style>
+    .rounded-style {
+        @apply block w-full rounded px-4 py-2 ;
+    }
+</style>
