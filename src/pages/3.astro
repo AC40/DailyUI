@@ -1,0 +1,36 @@
+---
+import Base from "../layouts/Base.astro";
+import Centered from "../components/Centered.astro";
+---
+
+<Base title="A or B - Your personal A/B test solution">
+    <header class="bg-slate-900 w-full text-slate-50 p-8">
+        <ul class="flex gap-4 items-center">
+            <li><a href="/home">Home</a></li>
+            <li><a href="/discover">Discover</a></li>
+            <li><a href="/pricing">Pricing</a></li>
+            <li class="flex-grow">
+                <div class="ml-auto w-10 h-10 bg-slate-500 rounded-full text-center flex justify-center items-center"><span class="text-xl">A</span></div>
+            </li>
+        </ul>
+    </header>
+    <main class="w-full h-4/5 bg-white p-8">
+        <Centered vertical={true}>
+            <div>
+                <h2 class="text-3xl">Your Personal A/B testing solution</h2>
+                <div class="flex">
+                    <div class="bg-slate-400 rounded w-32 h-40"></div>
+                    <div class="bg-slate-400 rounded w-32 h-40"></div>
+                    <div class="bg-slate-400 rounded w-32 h-40"></div>
+                    <div class="bg-slate-400 rounded w-32 h-40"></div>
+                    <div class="bg-slate-400 rounded w-32 h-40"></div>
+                    <div class="bg-slate-400 rounded w-32 h-40"></div>
+                    <div class="bg-slate-400 rounded w-32 h-40"></div>
+                    <div class="bg-slate-400 rounded w-32 h-40"></div>
+                    <div class="bg-slate-400 rounded w-32 h-40"></div>
+                    <div class="bg-slate-400 rounded w-32 h-40"></div>
+                </div>
+            </div>
+        </Centered>
+    </main>
+</Base>
